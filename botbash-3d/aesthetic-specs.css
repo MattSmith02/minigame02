@@ -1,0 +1,79 @@
+
+/* 
+   BOTBASH 3D // DESIGN SPECIFICATION CHEAT SHEET
+   Use this to recreate the "Industrial High-Contrast" look in other projects.
+*/
+
+:root {
+  /* Color Palette */
+  --color-player: #facc15;
+  --color-enemy: #ef4444;
+  --color-system-blue: #3b82f6;
+  --color-arena-floor: #94a3b8;
+  --color-border: #0f172a;
+  --color-bg-light: #cbd5e1;
+  
+  /* Layout Constants */
+  --border-thick: 4px solid var(--color-border);
+  --shadow-hard: 8px 8px 0px rgba(15, 23, 42, 0.2);
+  --ui-blur: blur(12px);
+}
+
+/* 1. THE "STICKER" PANEL (Used for HUD and Menus) */
+.ui-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: var(--ui-blur);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard);
+  padding: 1.5rem;
+  font-family: 'VT323', monospace;
+  text-transform: uppercase;
+}
+
+/* 2. THE CRT OVERLAY (Global Screen Effect) */
+.crt-effect {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.05) 50%
+  ), 
+  linear-gradient(
+    90deg, 
+    rgba(255, 0, 0, 0.02), 
+    rgba(0, 255, 0, 0.01), 
+    rgba(0, 0, 255, 0.02)
+  );
+  background-size: 100% 4px, 3px 100%;
+}
+
+/* 3. RETRO-TECH TYPOGRAPHY */
+.heading-branding {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: -0.05em;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.data-readout {
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  color: var(--color-border);
+}
+
+/* 4. ARENA AESTHETICS (Three.js Reference) */
+.arena-style {
+  background: var(--color-bg-light);
+  grid-pattern: 12x12 grid with #64748b lines;
+  hazard-accents: #fbbf24 (Yellow) and #1e293b (Dark Slate) stripes.
+}
+
+/* 5. ROBOT GEOMETRY SPECS */
+/* 
+   - Materials: Standard Physical Material
+   - Metalness: 0.6 (Metallic)
+   - Roughness: 0.3 (Slightly Glossy)
+   - Lighting: Warehouse Environment Preset + 1.2 Intensity Directional Light
+*/

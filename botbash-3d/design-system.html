@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BotBash 3D // Design System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f1f5f9;
+            font-family: 'VT323', monospace;
+            color: #0f172a;
+            padding: 4rem;
+        }
+        .heading-font { font-family: 'Orbitron', sans-serif; }
+        .token-card {
+            background: white;
+            border: 2px solid #cbd5e1;
+            padding: 1.5rem;
+            box-shadow: 4px 4px 0px #cbd5e1;
+        }
+        .component-preview {
+            background: #e2e8f0;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+            padding: 4rem;
+            border: 2px dashed #94a3b8;
+            position: relative;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="mb-16">
+        <h1 class="text-6xl font-bold tracking-tighter uppercase italic mb-2">Design System</h1>
+        <p class="text-2xl text-slate-500 uppercase tracking-widest">BotBash 3D // Figma Export Assets</p>
+    </header>
+
+    <section class="mb-16">
+        <h2 class="text-4xl font-bold mb-8 border-b-4 border-slate-900 pb-2">01. COLOR PALETTE</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="token-card">
+                <div class="h-24 w-full bg-[#facc15] mb-4 border-2 border-slate-900"></div>
+                <div class="font-bold">PLAYER_YELLOW</div>
+                <div class="text-slate-500">#facc15</div>
+            </div>
+            <div class="token-card">
+                <div class="h-24 w-full bg-[#ef4444] mb-4 border-2 border-slate-900"></div>
+                <div class="font-bold">ENEMY_RED</div>
+                <div class="text-slate-500">#ef4444</div>
+            </div>
+            <div class="token-card">
+                <div class="h-24 w-full bg-[#3b82f6] mb-4 border-2 border-slate-900"></div>
+                <div class="font-bold">UI_ACCENT_BLUE</div>
+                <div class="text-slate-500">#3b82f6</div>
+            </div>
+            <div class="token-card">
+                <div class="h-24 w-full bg-[#0f172a] mb-4 border-2 border-slate-900"></div>
+                <div class="font-bold">CORE_DARK</div>
+                <div class="text-slate-500">#0f172a</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-16">
+        <h2 class="text-4xl font-bold mb-8 border-b-4 border-slate-900 pb-2">02. TYPOGRAPHY</h2>
+        <div class="token-card space-y-8">
+            <div>
+                <span class="text-slate-400 block mb-2 uppercase text-sm">Heading / Branding (Orbitron)</span>
+                <p class="heading-font text-5xl font-bold">ARENA COMBAT OVERLAY</p>
+            </div>
+            <div>
+                <span class="text-slate-400 block mb-2 uppercase text-sm">Primary UI / Readouts (VT323)</span>
+                <p class="text-6xl uppercase">HULL_INTEGRITY: 100%</p>
+                <p class="text-3xl text-slate-500 uppercase">SYSTEMS_CHECK: OPTIMAL</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-16">
+        <h2 class="text-4xl font-bold mb-8 border-b-4 border-slate-900 pb-2">03. UI COMPONENTS</h2>
+        
+        <div class="space-y-12">
+            <!-- Header Component -->
+            <div>
+                <h3 class="text-xl mb-4 text-slate-400 uppercase">Main HUD Header</h3>
+                <div class="component-preview">
+                    <div class="bg-white p-6 border-b-4 border-r-4 border-slate-900 shadow-xl">
+                        <h1 class="text-4xl font-bold tracking-tighter text-slate-800 uppercase">Arena Combat</h1>
+                        <p class="text-sm text-slate-500 uppercase tracking-widest">LIVE_FEED // BRIGHT_MODE_ACTIVE</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Health HUD Component -->
+            <div>
+                <h3 class="text-xl mb-4 text-slate-400 uppercase">Player Status Panel</h3>
+                <div class="component-preview">
+                    <div class="w-80 bg-white p-6 border-4 border-slate-900 shadow-xl">
+                        <div class="flex justify-between items-end mb-3">
+                            <span class="text-lg font-bold text-slate-800 uppercase">Hull Integrity</span>
+                            <span class="text-3xl text-slate-900">75%</span>
+                        </div>
+                        <div class="w-full h-6 bg-slate-200 border-2 border-slate-400 p-1">
+                            <div class="h-full bg-blue-600 w-[75%]"></div>
+                        </div>
+                        <div class="mt-4 flex gap-4 text-sm text-slate-500 uppercase font-bold">
+                            <span>DRIVE: OK</span>
+                            <span>SPIN: OFF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enemy Counter -->
+            <div>
+                <h3 class="text-xl mb-4 text-slate-400 uppercase">Combatant Counter</h3>
+                <div class="component-preview">
+                    <div class="bg-white p-6 border-b-4 border-l-4 border-red-600 shadow-xl text-right">
+                        <div class="text-sm text-slate-500 mb-1 uppercase">Combatants</div>
+                        <div class="text-5xl font-bold text-red-600">03</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Start Button -->
+            <div>
+                <h3 class="text-xl mb-4 text-slate-400 uppercase">Interaction Button</h3>
+                <div class="component-preview">
+                    <button class="px-16 py-6 bg-slate-900 text-white text-4xl font-bold hover:bg-blue-600 shadow-[8px_8px_0px_#94a3b8] uppercase">
+                        Engage
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-32 text-slate-400 text-center uppercase tracking-widest">
+        End of Design Documentation // Version 1.0.1
+    </footer>
+</body>
+</html>

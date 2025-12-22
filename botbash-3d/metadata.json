@@ -1,0 +1,5 @@
+{
+  "name": "BotBash 3D",
+  "description": "A high-octane 3D Robot Wars-style combat game featuring physics-based collisions, AI enemies, and intense arena battles.",
+  "requestFramePermissions": []
+}
